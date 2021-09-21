@@ -30,6 +30,24 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyB3KR9xFAHpVXanv3_I5bc3PzP7gjrZ0c4",
+      authDomain: "big-table-652f8.firebaseapp.com",
+      projectId: "big-table-652f8",
+      storageBucket: "big-table-652f8.appspot.com",
+      messagingSenderId: "445640415966",
+      appId: "1:445640415966:web:57a2f71ff0e111cc64004f",
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
