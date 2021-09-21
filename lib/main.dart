@@ -32,7 +32,7 @@ class _AppState extends State<App> {
       builder: (context, snapshot) {
         // Check for errors
         if (snapshot.hasError) {
-          return const Text("Something Went Wrong");
+          return const Center(child: Text("Something Went Wrong"));
         }
 
         // Once complete, show your application
@@ -41,7 +41,7 @@ class _AppState extends State<App> {
         }
 
         // Otherwise, show something whilst waiting for initialization to complete
-        return const Text("Loading");
+        return const Center(child: Text("Loading"));
       },
     );
   }
@@ -83,6 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
     FirebaseFirestore firestore = FirebaseFirestore.instance;
     CollectionReference users = firestore.collection('users');
     users.add({'name': 'First Last', 'age': 'turning 30', 'dob': 3});
+    print("funciton finished running");
   }
 
   @override
@@ -96,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             TextButton(
-              child: const Text("Press Me to Test Firebase"),
+              child: const Text("Press Me tasjfo Test Firebase"),
               onPressed: _testFirebase,
             ),
             const Text(
